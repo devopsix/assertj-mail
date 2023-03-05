@@ -1,0 +1,145 @@
+Received: by mail-tester.com (Postfix, from userid 500)
+    id 99457A006C; Sun,  8 Dec 2019 10:34:25 +0100 (CET)
+Authentication-Results: mail-tester.com;
+    dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=outlook.com header.i=@outlook.com header.b=nuEwbtEV;
+    dkim-atps=neutral
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on mail-tester.com
+X-Spam-Level: 
+X-Spam-Status: No/-0.2/5.0
+X-Spam-Test-Scores: DKIM_SIGNED=0.1,DKIM_VALID=-0.1,DKIM_VALID_AU=-0.1,
+    DKIM_VALID_EF=-0.1,FREEMAIL_FROM=0.001,HTML_MESSAGE=0.001,
+    RCVD_IN_DNSWL_BLOCKED=0.001,SPF_HELO_PASS=-0.001,SPF_PASS=-0.001,
+    URIBL_BLOCKED=0.001
+X-Spam-Last-External-IP: 40.92.67.108
+X-Spam-Last-External-HELO: EUR02-AM5-obe.outbound.protection.outlook.com
+X-Spam-Last-External-rDNS: mail-oln040092067108.outbound.protection.outlook.com
+X-Spam-Date-of-Scan: Sun, 08 Dec 2019 10:34:25 +0100
+X-Spam-Report: 
+    *  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was
+    *      blocked.  See
+    *      http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+    *      for more information.
+    *      [URIs: outlook.com]
+    *  0.0 RCVD_IN_DNSWL_BLOCKED RBL: ADMINISTRATOR NOTICE: The query to
+    *      DNSWL was blocked.  See
+    *      http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+    *      for more information.
+    *      [40.92.67.108 listed in list.dnswl.org]
+    * -0.0 SPF_PASS SPF: sender matches SPF record
+    * -0.0 SPF_HELO_PASS SPF: HELO matches SPF record
+    *  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+    *      provider (devopsix[at]outlook.com)
+    *  0.0 HTML_MESSAGE BODY: HTML included in message
+    * -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+    *      envelope-from domain
+    * -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+    *  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+    *       valid
+    * -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+    *      author's domain
+Received-SPF: Pass (sender SPF authorized) identity=mailfrom; client-ip=40.92.67.108; helo=eur02-am5-obe.outbound.protection.outlook.com; envelope-from=devopsix@outlook.com; receiver=test-ymfs1@mail-tester.com 
+DMARC-Filter: OpenDMARC Filter v1.3.1 mail-tester.com D24569FF9D
+Authentication-Results: mail-tester.com; dmarc=pass header.from=outlook.com
+Authentication-Results: mail-tester.com;
+    dkim=fail reason="signature verification failed" (2048-bit key; unprotected) header.d=outlook.com header.i=@outlook.com header.b=nuEwbtEV;
+    dkim-atps=neutral
+Received: from EUR02-AM5-obe.outbound.protection.outlook.com (mail-oln040092067108.outbound.protection.outlook.com [40.92.67.108])
+    (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+    (No client certificate requested)
+    by mail-tester.com (Postfix) with ESMTPS id D24569FF9D
+    for <test-ymfs1@mail-tester.com>; Sun,  8 Dec 2019 10:34:23 +0100 (CET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=MrF1OtJpDiwIaOPE4Os2JxUzIqPKNXDcr4a/RhZKSuC5S0YDHAp25h1Ti8SN4eU35rIely+qfsFPcbwnVSzUf2JMTl+oewGBodmIl0Kg6fZ2NqG11by9kDgnavYp0WLF//ZlMTdPvheMmgWv1z0vB9VQZlKS0w+Gip3dXO88bFkf9vX0gJnIejMQoyuslEc0RPU3rw1YMDoblKb/5GmZK8lFeJFrTOVi9SVriPKtj5QQur2ARoMGx6OzWscR/A8ooe0rBJFoPcRlkP7Oa5wGFWZiE6htvSvR589Uk+wxEZwuu0aIlmyB6XAD2JwNXNFBAh3N+82+2fkPoTY1qg8Rkg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ZycRXILL/VSiIueitd1who2PkNhFPMQ3VBKG+BjMFac=;
+ b=Qkw6RMvkScULmyaZ5dBmCUX+saqyafrbTWPGfe2dhBc55K5Is7uJdohO9u7tYb3J7Zf631VpwXeyVeRleRZuoye1EoNENWy3dWEqusAr14Alwv5Dt2pk5EO+ONd/LmB63HmbgSuDtE9tN2Z92I2hSZFF7JJDPlZGTYDLJbtIzL3IKMSIFKoByS6Zl1RuiJaZxRV2jQS6iR1+/D3NUVvPWww5gNcymuR7UzG9JvUQh6La87Le/tRbWXC17oCEW7MrIZApzFnaglNye0l17vQ/WK9MOln0ITipTNzwnFTMwNY8mbaychvx0ROB1WW4jmJt4NQcTayhk5RyzlXf1iNXKw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ZycRXILL/VSiIueitd1who2PkNhFPMQ3VBKG+BjMFac=;
+ b=nuEwbtEVf1Lg3MViGLgJohgEBEP1/dtdFGYkXBHkdsumytoPuNcOqvaZnj7lbVNKSJ97T2i3gn1SFDs2tTtdXCXVoxtTBnBpDbTYGCaGYxX6W7OwYnTMFCPF6Xfj8p7E+WJdgY5d6Eda6BMd+4wyijbhT6CMfLd8JfBSiv1Db+aWk50C6bI4u3SrwTtMJIMKWeyEDn/kDXGHAC8bCcwnZr0fq7fGBRAzo+QFmaLopIbhITkrtEP9Olx/1fV5VJpNlgPEdgrBJAL14y/g7QZbsGH/N0t0Mi9A4OK3CBnrA6sTHP9/75E1Kp/1MAUnApbw3p3KBClUHbWclX1FKybX1g==
+Received: from HE1EUR02FT058.eop-EUR02.prod.protection.outlook.com
+ (10.152.10.53) by HE1EUR02HT165.eop-EUR02.prod.protection.outlook.com
+ (10.152.10.239) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.18; Sun, 8 Dec
+ 2019 09:34:23 +0000
+Received: from HE1PR0401MB2427.eurprd04.prod.outlook.com (10.152.10.57) by
+ HE1EUR02FT058.mail.protection.outlook.com (10.152.11.31) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2495.18 via Frontend Transport; Sun, 8 Dec 2019 09:34:23 +0000
+Received: from HE1PR0401MB2427.eurprd04.prod.outlook.com
+ ([fe80::6c6b:8ff2:78ef:2d1e]) by HE1PR0401MB2427.eurprd04.prod.outlook.com
+ ([fe80::6c6b:8ff2:78ef:2d1e%5]) with mapi id 15.20.2516.018; Sun, 8 Dec 2019
+ 09:34:23 +0000
+From: devopsix devopsix <devopsix@outlook.com>
+To: "test-ymfs1@mail-tester.com" <test-ymfs1@mail-tester.com>
+Subject:
+ =?iso-2022-jp?B?GyRCIXoheiF6GyhCIEEgcmF0aGVyIGxvbmcgc3ViamVjdCB3aXRoIFVu?=
+ =?iso-2022-jp?B?aWNvZGUgY2hhcmFjdGVycyB3aGljaCBzaG91bGQgbm90IGZpdCBpbnRv?=
+ =?iso-2022-jp?B?IG9uZSBoZWFkZXIgbGluZSAbJEIheiF6IXobKEI=?=
+Thread-Topic:
+ =?iso-2022-jp?B?GyRCIXoheiF6GyhCIEEgcmF0aGVyIGxvbmcgc3ViamVjdCB3aXRoIFVu?=
+ =?iso-2022-jp?B?aWNvZGUgY2hhcmFjdGVycyB3aGljaCBzaG91bGQgbm90IGZpdCBpbnRv?=
+ =?iso-2022-jp?B?IG9uZSBoZWFkZXIgbGluZSAbJEIheiF6IXobKEI=?=
+Thread-Index: AQHVraqsfF1n/ybDhUeAU8vsv9+SRQ==
+Date: Sun, 8 Dec 2019 09:34:23 +0000
+Message-ID:
+ <HE1PR0401MB24279B86E7353F5886A73526D6590@HE1PR0401MB2427.eurprd04.prod.outlook.com>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-incomingtopheadermarker:
+ OriginalChecksum:8D7E2423A8087D062A553AC252BA32A618744E612DCEAEE0B6176AFFC8BF1102;UpperCasedChecksum:DE3B4FBE8B2DAFF51A669ECC18F1B493F19953F145F6193E0230D2A907DD4FD9;SizeAsReceived:7064;Count:42
+x-tmn: [8EdjA2AdnF/UhiJzKyorP6kM3lMcBRBS]
+x-ms-publictraffictype: Email
+x-incomingheadercount: 42
+x-eopattributedmessage: 0
+x-ms-office365-filtering-correlation-id: 69a4306f-896a-46b1-a15a-08d77bc1cf2f
+x-ms-traffictypediagnostic: HE1EUR02HT165:
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ +Hi0echuc+FftDdptsExSk/mWhayEOBOKZ0n+//nT4X7C3DAmK1dfzdlIoPGrytL
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+    boundary="_000_HE1PR0401MB24279B86E7353F5886A73526D6590HE1PR0401MB2427_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 69a4306f-896a-46b1-a15a-08d77bc1cf2f
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Dec 2019 09:34:23.0694
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1EUR02HT165
+
+--_000_HE1PR0401MB24279B86E7353F5886A73526D6590HE1PR0401MB2427_
+Content-Type: text/plain; charset="iso-2022-jp"
+Content-Transfer-Encoding: quoted-printable
+
+Lorem ipsum
+
+--_000_HE1PR0401MB24279B86E7353F5886A73526D6590HE1PR0401MB2427_
+Content-Type: text/html; charset="iso-2022-jp"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-2022-=
+jp">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+Lorem ipsum</div>
+</body>
+</html>
+
+--_000_HE1PR0401MB24279B86E7353F5886A73526D6590HE1PR0401MB2427_--

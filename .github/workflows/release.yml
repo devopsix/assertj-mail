@@ -1,0 +1,99 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: 'Release version number'
+        required: true
+      developmentVersion:
+        description: 'Next development (snapshot) version number'
+        required: true
+
+jobs:
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out from SCM
+        uses: actions/checkout@v3
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Set up JDK/Maven
+        uses: actions/setup-java@v3
+        with:
+            distribution: 'zulu'
+            java-version: 11
+      - name: Configure Maven settings
+        uses: whelk-io/maven-settings-xml-action@v21
+        with:
+          servers: >-
+            [{
+              "id": "ossrh",
+              "username": "${{ github.actor }}",
+              "password": "${{ secrets.OSS_PASSWORD }}"
+            }]
+      - name: Configure git
+        run: |
+          git config --global committer.email "noreply@github.com"
+          git config --global committer.name "GitHub Actions"
+          git config --global author.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global author.name "${{ github.actor }}"
+      - name: Prepare release
+        id: prepare_release
+        run: >-
+          mvn
+          --batch-mode
+          "-DpreparationGoals=clean compile"
+          "-DreleaseVersion=${{ github.event.inputs.releaseVersion }}"
+          "-DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}"
+          "-Dtag=v${{ github.event.inputs.releaseVersion }}"
+          "-Dusername=${{ github.actor }}"
+          "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
+          "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          release:prepare
+      - name: Perform release
+        id: perform_release
+        run: >-
+          mvn
+          --batch-mode
+          "-Dgoals=deploy"
+          "-DreleaseProfiles=release,-examples"
+          "-Darguments=-Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          "-Dusername=${{ github.actor }}"
+          "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
+          "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          release:perform
+      # Maven Release Plugin 3.0.0-M1 would automatically remove the tag, but unfortunately
+      # it's unusable due to this bug: https://issues.apache.org/jira/browse/MRELEASE-1038
+      # Hence, for the time being, we have to delete the tag ourselves.
+      - name: 'In case of failure: Rollback'
+        id: rollback
+        if: failure()
+        run: >-
+          git tag -d "v${{ github.event.inputs.releaseVersion }}" && git push origin ":refs/tags/v${{ github.event.inputs.releaseVersion }}"
+          ;
+          mvn
+          --batch-mode
+          "-Dusername=${{ github.actor }}"
+          "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
+          "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          release:rollback
+      - name: Create GitHub release
+        id: create_github_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.event.inputs.releaseVersion }}
+          name: assertj-mail-${{ github.event.inputs.releaseVersion }}
+          body: |-
+            Release ${{ github.event.inputs.releaseVersion }} of assertj-mail
+            
+            [Change log](${{ github.server_url }}/${{ github.repository }}/blob/main/CHANGES.md)
+          files: |
+            ./target/checkout/assertj-mail/target/assertj-mail-${{ github.event.inputs.releaseVersion }}.jar
+            ./target/checkout/assertj-mail/target/assertj-mail-${{ github.event.inputs.releaseVersion }}-javadoc.jar
+            ./target/checkout/assertj-mail-jakarta/target/assertj-mail-jakarta-${{ github.event.inputs.releaseVersion }}.jar
+            ./target/checkout/assertj-mail-jakarta/target/assertj-mail-jakarta-${{ github.event.inputs.releaseVersion }}-javadoc.jar

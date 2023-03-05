@@ -1,0 +1,22 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK/Maven
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build and verify all modules
+        run: >-
+          mvn
+          --batch-mode
+          --activate-profiles=checkstyle,spotbugs,coverage
+          "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          verify
