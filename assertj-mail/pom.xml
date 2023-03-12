@@ -3,7 +3,7 @@
 
     <groupId>org.devopsix</groupId>
     <artifactId>assertj-mail</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>AssertJ Mail (Java EE 8)</name>
@@ -42,7 +42,7 @@
         <connection>scm:git:${repoBaseUrl}.git</connection>
         <developerConnection>scm:git:${repoBaseUrl}.git</developerConnection>
         <url>${repoBaseUrl}</url>
-        <tag>HEAD</tag>
+        <tag>v1.0.0</tag>
     </scm>
 
     <distributionManagement>
