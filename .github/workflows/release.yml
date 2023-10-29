@@ -57,6 +57,8 @@ jobs:
           release:prepare
       - name: Perform release
         id: perform_release
+        env:
+          AUTO_RELEASE: ${{ vars.AUTO_RELEASE }}
         run: >-
           mvn
           --batch-mode
