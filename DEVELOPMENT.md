@@ -34,3 +34,13 @@ Run `mvn --activate-profiles=-examples install` to install the main artifacts in
 
 The code for the assertj-mail-jakarta and assert-mail-examples-jakarta modules is “generated” from their non-Jakarta
 counterparts by copying source files and substituting “jakarta.mail” for “javax.mail”.
+
+# Checking for Dependency Updates
+
+Run `mvn versions:display-dependency-updates`
+to check for dependency updates.
+
+# Checking for Plug-in Updates
+
+Run `mvn --activate-profiles=checkstyle,spotbugs,coverage,release versions:display-plugin-updates`
+to check for Maven plug-in updates.

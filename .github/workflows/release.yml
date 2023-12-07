@@ -69,21 +69,6 @@ jobs:
           "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
           "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
           release:perform
-      # Maven Release Plugin 3.0.0-M1 would automatically remove the tag, but unfortunately
-      # it's unusable due to this bug: https://issues.apache.org/jira/browse/MRELEASE-1038
-      # Hence, for the time being, we have to delete the tag ourselves.
-      - name: 'In case of failure: Rollback'
-        id: rollback
-        if: failure()
-        run: >-
-          git tag -d "v${{ github.event.inputs.releaseVersion }}" && git push origin ":refs/tags/v${{ github.event.inputs.releaseVersion }}"
-          ;
-          mvn
-          --batch-mode
-          "-Dusername=${{ github.actor }}"
-          "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
-          "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
-          release:rollback
       - name: Create GitHub release
         id: create_github_release
         uses: softprops/action-gh-release@v1
