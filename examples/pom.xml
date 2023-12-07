@@ -36,17 +36,17 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.10.0</version>
+                <version>5.10.1</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>5.6.0</version>
+                <version>5.8.0</version>
             </dependency>
             <dependency>
                 <groupId>com.icegreen</groupId>
                 <artifactId>greenmail-junit5</artifactId>
-                <version>1.6.14</version>
+                <version>1.6.15</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
