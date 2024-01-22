@@ -3,7 +3,7 @@
 
   <groupId>org.devopsix</groupId>
   <artifactId>assertj-mail-parent</artifactId>
-  <version>1.0.4-SNAPSHOT</version>
+  <version>1.0.4</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -14,7 +14,7 @@
     <connection>scm:git:${repoBaseUrl}.git</connection>
     <developerConnection>scm:git:${repoBaseUrl}.git</developerConnection>
     <url>${repoBaseUrl}</url>
-    <tag>HEAD</tag>
+    <tag>v1.0.4</tag>
   </scm>
 
   <modules>
