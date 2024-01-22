@@ -42,5 +42,5 @@ to check for dependency updates.
 
 # Checking for Plug-in Updates
 
-Run `mvn --activate-profiles=checkstyle,spotbugs,coverage,release versions:display-plugin-updates`
+Run `mvn --activate-profiles=checkstyle,spotbugs,coverage,release -DprocessUnboundPlugins=true versions:display-plugin-updates`
 to check for Maven plug-in updates.
