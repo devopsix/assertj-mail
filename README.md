@@ -18,14 +18,14 @@ To use AssertJ Mail in a Maven project add a dependency on `org.devopsix:assertj
 <dependency>
     <groupId>org.devopsix</groupId>
     <artifactId>assertj-mail</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <scope>test</scope>
 </dependency>
 <!-- Maven coordinates for Jakarta EE 9+ / jakarta.mail -->
 <dependency>
     <groupId>org.devopsix</groupId>
     <artifactId>assertj-mail-jakarta</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <scope>test</scope>
 </dependency>
 ```
