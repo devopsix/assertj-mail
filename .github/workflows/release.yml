@@ -1,4 +1,5 @@
 name: Release
+run-name: Release ${{ inputs.releaseVersion }}
 
 on:
   workflow_dispatch:
@@ -33,7 +34,7 @@ jobs:
           servers: >-
             [{
               "id": "ossrh",
-              "username": "${{ github.actor }}",
+              "username": "${{ secrets.OSS_USER }}",
               "password": "${{ secrets.OSS_PASSWORD }}"
             }]
       - name: Configure git
