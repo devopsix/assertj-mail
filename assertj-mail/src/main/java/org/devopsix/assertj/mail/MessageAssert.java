@@ -23,6 +23,11 @@ import org.assertj.core.api.Assertions;
  */
 public final class MessageAssert extends AbstractPartAssert<MessageAssert, Message> {
 
+  /**
+   * <p>Creates a new instance.</p>
+   *
+   * @param message Assertion subject
+   */
   public MessageAssert(Message message) {
     super(message, MessageAssert.class);
   }

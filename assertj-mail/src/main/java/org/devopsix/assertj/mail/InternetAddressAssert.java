@@ -12,6 +12,11 @@ import org.assertj.core.api.Assertions;
 public final class InternetAddressAssert
     extends AbstractAssert<InternetAddressAssert, InternetAddress> {
 
+  /**
+   * <p>Creates a new instance.</p>
+   *
+   * @param internetAddress Assertion subject
+   */
   public InternetAddressAssert(InternetAddress internetAddress) {
     super(internetAddress, InternetAddressAssert.class);
   }

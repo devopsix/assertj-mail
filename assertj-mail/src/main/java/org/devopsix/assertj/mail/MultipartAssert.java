@@ -14,6 +14,11 @@ public final class MultipartAssert extends AbstractAssert<MultipartAssert, Multi
 
   private final MultipartReader multipartReader;
 
+  /**
+   * <p>Creates a new instance.</p>
+   *
+   * @param multipart Assertion subject
+   */
   public MultipartAssert(Multipart multipart) {
     super(multipart, MultipartAssert.class);
     multipartReader = new MultipartReader(multipart);

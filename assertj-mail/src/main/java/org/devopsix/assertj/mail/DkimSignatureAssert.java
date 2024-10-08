@@ -33,6 +33,13 @@ public class DkimSignatureAssert extends AbstractAssert<DkimSignatureAssert, Par
     dkimVerifier = new DKIMVerifier(new RecordRetriever(publicKeys));
   }
 
+  /**
+   * <p>Creates a new instance.</p>
+   *
+   * @param message Assertion subject
+   * @param publicKeys Map of public keys as they would be published in DNS TXT records
+   * @return New instance
+   */
   public static DkimSignatureAssert assertThat(Part message, Map<String, String> publicKeys) {
     return new DkimSignatureAssert(message, publicKeys);
   }
