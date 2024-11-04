@@ -34,7 +34,7 @@ public class DkimSignatureAssert extends AbstractAssert<DkimSignatureAssert, Par
   }
 
   /**
-   * <p>Creates a new instance.</p>
+   * Creates a new instance.
    *
    * @param message Assertion subject
    * @param publicKeys Map of public keys as they would be published in DNS TXT records
@@ -45,7 +45,7 @@ public class DkimSignatureAssert extends AbstractAssert<DkimSignatureAssert, Par
   }
 
   /**
-   * <p>Asserts that the DKIM signature is valid.</p>
+   * Asserts that the DKIM signature is valid.
    *
    * @return The original assertion for further chaining
    * @throws AssertionError If the DKIM signature is not valid
@@ -63,7 +63,7 @@ public class DkimSignatureAssert extends AbstractAssert<DkimSignatureAssert, Par
   }
 
   /**
-   * <p>Returns a {@code SignatureRecord} array assertion for the signature's records.</p>
+   * Returns a {@code SignatureRecord} array assertion for the signature's records.
    *
    * @return An assertion for the DKIM signature's records
    * @throws AssertionError If validating the signature fails

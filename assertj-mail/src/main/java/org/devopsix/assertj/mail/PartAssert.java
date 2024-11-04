@@ -8,7 +8,7 @@ import javax.mail.Part;
 public final class PartAssert extends AbstractPartAssert<PartAssert, Part> {
 
   /**
-   * <p>Creates a new instance.</p>
+   * Creates a new instance.
    *
    * @param part Assertion subject
    */

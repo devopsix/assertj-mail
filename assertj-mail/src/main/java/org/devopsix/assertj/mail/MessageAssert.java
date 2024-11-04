@@ -24,7 +24,7 @@ import org.assertj.core.api.Assertions;
 public final class MessageAssert extends AbstractPartAssert<MessageAssert, Message> {
 
   /**
-   * <p>Creates a new instance.</p>
+   * Creates a new instance.
    *
    * @param message Assertion subject
    */
@@ -33,7 +33,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns a {@code OffsetDateTime} assertion for the message's “Date” header.</p>
+   * Returns a {@code OffsetDateTime} assertion for the message's “Date” header.
    *
    * @return An assertion for the message's “Date” header
    * @throws AssertionError If there is more than one “Date” header or parsing the header value
@@ -44,7 +44,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} array assertion for the message's “From” header.</p>
+   * Returns an {@code InternetAddress} array assertion for the message's “From” header.
    *
    * @return An assertion for the message's “From” header
    * @throws AssertionError If there is more than one “From” header or parsing the header value
@@ -55,7 +55,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} assertion for the message's “Sender” header.</p>
+   * Returns an {@code InternetAddress} assertion for the message's “Sender” header.
    *
    * @return An assertion for the message's “Sender” header
    * @throws AssertionError If there is more than one “Sender” header or parsing the header value
@@ -66,7 +66,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} array assertion for the message's “Reply-To” header.</p>
+   * Returns an {@code InternetAddress} array assertion for the message's “Reply-To” header.
    *
    * @return An assertion for the message's “Reply-To” header
    * @throws AssertionError If there is more than one “Reply-To” header or parsing the header value
@@ -77,7 +77,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} array assertion for the message's “To” header.</p>
+   * Returns an {@code InternetAddress} array assertion for the message's “To” header.
    *
    * @return An assertion for the message's “To” header
    * @throws AssertionError If there is more than one “To” header or parsing the header value fails
@@ -87,7 +87,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} array assertion for the message's “Cc” header.</p>
+   * Returns an {@code InternetAddress} array assertion for the message's “Cc” header.
    *
    * @return An assertion for the message's “Cc” header
    * @throws AssertionError If there is more than one “Cc” header or parsing the header value fails
@@ -97,7 +97,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns an {@code InternetAddress} array assertion for the message's “Bcc” header.</p>
+   * Returns an {@code InternetAddress} array assertion for the message's “Bcc” header.
    *
    * @return An assertion for the message's “Bcc” header
    * @throws AssertionError If there is more than one “Bcc” header or parsing the header value fails
@@ -107,7 +107,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the message's “Subject” header.</p>
+   * Returns a {@code String} assertion for the message's “Subject” header.
    *
    * @return An assertion for the message's “Subject” header
    * @throws AssertionError If there is more than one “Subject” header
@@ -117,7 +117,7 @@ public final class MessageAssert extends AbstractPartAssert<MessageAssert, Messa
   }
 
   /**
-   * <p>Returns a {@code DkimSignatureAssert} assertion for the message's DKIM signature.</p>
+   * Returns a {@code DkimSignatureAssert} assertion for the message's DKIM signature.
    *
    * <p>DKIM public keys are distributed as DNS TXT records. As tests should not depend
    * on any real DNS records this method accepts a map of virtual TXT records. The map keys

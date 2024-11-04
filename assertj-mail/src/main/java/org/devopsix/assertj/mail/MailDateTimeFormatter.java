@@ -21,8 +21,8 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
- * <p>This class supplies a date time formatter relaxed enough to read both,
- * RFC 822 (two-digit year) and RFC 2822/1123 (four-digit year) notation.</p>
+ * This class supplies a date time formatter relaxed enough to read both,
+ * RFC 822 (two-digit year) and RFC 2822/1123 (four-digit year) notation.
  *
  * @author devopsix
  */
@@ -94,7 +94,7 @@ final class MailDateTimeFormatter {
   private static final Pattern TRAILING_ZONE = compile("\\s+\\([^(]+\\)\\s*$");
 
   /**
-   * <p>Trims trailing time zone name in parentheses after the zone offset.</p>
+   * Trims trailing time zone name in parentheses after the zone offset.
    *
    * <p>Some mailer programs seem to append the zone name although that is not covered by the
    * RFCs.</p>
