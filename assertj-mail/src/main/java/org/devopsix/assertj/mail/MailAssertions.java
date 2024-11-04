@@ -8,7 +8,7 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.api.InstanceOfAssertFactory;
 
 /**
- * <p>This class provides access to all AssertJ Mail assertions.</p>
+ * This class provides access to all AssertJ Mail assertions.
  */
 public final class MailAssertions {
 
@@ -16,7 +16,7 @@ public final class MailAssertions {
   }
 
   /**
-   * <p>A factory for creating instances of {@link MessageAssert}.</p>
+   * A factory for creating instances of {@link MessageAssert}.
    *
    * @see Assertions#as(InstanceOfAssertFactory)
    */
@@ -24,7 +24,7 @@ public final class MailAssertions {
       new InstanceOfAssertFactory<>(Message.class, MailAssertions::assertThat);
 
   /**
-   * <p>A factory for creating instances of {@link PartAssert}.</p>
+   * A factory for creating instances of {@link PartAssert}.
    *
    * @see Assertions#as(InstanceOfAssertFactory)
    */
@@ -32,7 +32,7 @@ public final class MailAssertions {
       new InstanceOfAssertFactory<>(Part.class, MailAssertions::assertThat);
 
   /**
-   * <p>A factory for creating instances of {@link MultipartAssert}.</p>
+   * A factory for creating instances of {@link MultipartAssert}.
    *
    * @see Assertions#as(InstanceOfAssertFactory)
    */
@@ -40,7 +40,7 @@ public final class MailAssertions {
       new InstanceOfAssertFactory<>(Multipart.class, MailAssertions::assertThat);
 
   /**
-   * <p>A factory for creating instances of {@link InternetAddressAssert}.</p>
+   * A factory for creating instances of {@link InternetAddressAssert}.
    *
    * @see Assertions#as(InstanceOfAssertFactory)
    */
@@ -49,8 +49,8 @@ public final class MailAssertions {
       new InstanceOfAssertFactory<>(InternetAddress.class, MailAssertions::assertThat);
 
   /**
-   * <p>Returns an instance of {@code MessageAssert} which can be used to verify assertions
-   * for the given message.</p>
+   * Returns an instance of {@code MessageAssert} which can be used to verify assertions
+   * for the given message.
    *
    * @param message The message to assert
    * @return An instance of {@code MessageAssert} for the given message
@@ -60,8 +60,8 @@ public final class MailAssertions {
   }
 
   /**
-   * <p>Returns an instance of {@code PartAssert} which can be used to verify assertions
-   * for the given message part.</p>
+   * Returns an instance of {@code PartAssert} which can be used to verify assertions
+   * for the given message part.
    *
    * @param part The message part to assert
    * @return An instance of {@code PartAssert} for the given message
@@ -71,8 +71,8 @@ public final class MailAssertions {
   }
 
   /**
-   * <p>Returns an instance of {@code MultipartAssert} which can be used to verify assertions
-   * for the given multipart.</p>
+   * Returns an instance of {@code MultipartAssert} which can be used to verify assertions
+   * for the given multipart.
    *
    * @param multipart The multipart to assert
    * @return An instance of {@code MultipartAssert} for the given multipart
@@ -82,8 +82,8 @@ public final class MailAssertions {
   }
 
   /**
-   * <p>Returns an instance of {@code InternetAddressAssert} which can be used to verify assertions
-   * for the given internet address.</p>
+   * Returns an instance of {@code InternetAddressAssert} which can be used to verify assertions
+   * for the given internet address.
    *
    * @param address The internet address to assert
    * @return An instance of {@code InternetAddressAssert} for the given message

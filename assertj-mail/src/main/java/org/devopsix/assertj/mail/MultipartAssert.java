@@ -15,7 +15,7 @@ public final class MultipartAssert extends AbstractAssert<MultipartAssert, Multi
   private final MultipartReader multipartReader;
 
   /**
-   * <p>Creates a new instance.</p>
+   * Creates a new instance.
    *
    * @param multipart Assertion subject
    */
@@ -25,7 +25,7 @@ public final class MultipartAssert extends AbstractAssert<MultipartAssert, Multi
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the multipart's content type.</p>
+   * Returns a {@code String} assertion for the multipart's content type.
    *
    * @return An assertion for the multipart's content type
    */
@@ -34,7 +34,7 @@ public final class MultipartAssert extends AbstractAssert<MultipartAssert, Multi
   }
 
   /**
-   * <p>Returns an {@code BodyPart} array assertion for the multipart's parts.</p>
+   * Returns an {@code BodyPart} array assertion for the multipart's parts.
    *
    * @return An assertion for the multipart's parts
    * @throws AssertionError If reading the parts fails

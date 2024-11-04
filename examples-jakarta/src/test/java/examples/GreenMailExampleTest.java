@@ -20,8 +20,8 @@ import static jakarta.mail.Message.RecipientType.TO;
 import static org.assertj.core.api.Assertions.as;
 
 /**
- * <p>This class demonstrates how the AssertJ Mail assertions can be used together
- * with GreenMail for verifying an email sent by an application.</p>
+ * This class demonstrates how the AssertJ Mail assertions can be used together
+ * with GreenMail for verifying an email sent by an application.
  *
  * <p><a href="https://greenmail-mail-test.github.io/greenmail/">GreenMail</a> is an email server for testing purposes.</p>
  *

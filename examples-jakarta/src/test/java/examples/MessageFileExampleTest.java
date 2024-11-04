@@ -19,8 +19,8 @@ import java.util.Properties;
 import static java.util.Collections.singletonMap;
 
 /**
- * <p>This class demonstrates how the AssertJ Mail assertions can be used for
- * verifying an email loaded from a file.</p>
+ * This class demonstrates how the AssertJ Mail assertions can be used for
+ * verifying an email loaded from a file.
  *
  * @author devopsix
  */

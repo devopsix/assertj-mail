@@ -13,7 +13,7 @@ public final class InternetAddressAssert
     extends AbstractAssert<InternetAddressAssert, InternetAddress> {
 
   /**
-   * <p>Creates a new instance.</p>
+   * Creates a new instance.
    *
    * @param internetAddress Assertion subject
    */
@@ -22,8 +22,8 @@ public final class InternetAddressAssert
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the internet address' actual address part.
-   * I.e. “anna@example.com” in {@code "Anna <anna@example.com>"}</p>
+   * Returns a {@code String} assertion for the internet address' actual address part.
+   * I.e. “anna@example.com” in {@code "Anna <anna@example.com>"}
    *
    * @return An assertion for the address part
    */
@@ -32,8 +32,8 @@ public final class InternetAddressAssert
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the internet address' personal name part.
-   * I.e. “Anna” in {@code "Anna <anna@example.com>"}.</p>
+   * Returns a {@code String} assertion for the internet address' personal name part.
+   * I.e. “Anna” in {@code "Anna <anna@example.com>"}.
    *
    * @return An assertion for the name part
    */

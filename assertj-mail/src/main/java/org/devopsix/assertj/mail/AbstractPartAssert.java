@@ -21,7 +21,7 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the message part's header with the given name.</p>
+   * Returns a {@code String} assertion for the message part's header with the given name.
    *
    * @param name Header name
    * @return An assertion for the message part's given header
@@ -32,8 +32,8 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code String} array assertion for the message part's header with the given
-   * name.</p>
+   * Returns a {@code String} array assertion for the message part's header with the given
+   * name.
    *
    * @param name Header name
    * @return An assertion for the message part's given header
@@ -43,8 +43,8 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code OffsetDateTime} assertion for the message part's header with the given
-   * name.</p>
+   * Returns a {@code OffsetDateTime} assertion for the message part's header with the given
+   * name.
    *
    * @param name Header name
    * @return An assertion for the message part's given header
@@ -56,8 +56,8 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code OffsetDateTime} array assertion for the message part's header with the
-   * given name.</p>
+   * Returns a {@code OffsetDateTime} array assertion for the message part's header with the
+   * given name.
    *
    * @param name Header name
    * @return An assertion for the message part's given header
@@ -68,7 +68,7 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code String} assertion for the message part's plain text content.</p>
+   * Returns a {@code String} assertion for the message part's plain text content.
    *
    * @return An assertion for the message part's text content
    * @throws AssertionError If the content is not plain text or reading it fails
@@ -78,7 +78,7 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code byte[]} assertion for the message part's binary content.</p>
+   * Returns a {@code byte[]} assertion for the message part's binary content.
    *
    * @return An assertion for the message part's binary content
    * @throws AssertionError If the content is not binary content or reading it fails
@@ -88,7 +88,7 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Asserts that the message part has multipart content ({@code Content-Type: multipart/*}).</p>
+   * Asserts that the message part has multipart content ({@code Content-Type: multipart/*}).
    *
    * @return The original assertion for further chaining
    * @throws AssertionError If the content is not multipart content or reading it fails
@@ -101,8 +101,8 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code Multipart} assertion for the message part's multipart content
-   * ({@code Content-Type: multipart/*}).</p>
+   * Returns a {@code Multipart} assertion for the message part's multipart content
+   * ({@code Content-Type: multipart/*}).
    *
    * @return An assertion for the message part's multipart content
    * @throws AssertionError If the content is not multipart content or reading it fails
@@ -112,8 +112,8 @@ abstract class AbstractPartAssert<S extends AbstractPartAssert<S, A>, A extends 
   }
 
   /**
-   * <p>Returns a {@code Multipart} array assertion for all the message part's multipart contents
-   * ({@code Content-Type: multipart/*}). Multipart contents are searched recursively.</p>
+   * Returns a {@code Multipart} array assertion for all the message part's multipart contents
+   * ({@code Content-Type: multipart/*}). Multipart contents are searched recursively.
    *
    * <p>Please note that no assertion error occurs if the message part is not of multipart type.
    * The returned assertion contains an empty array in this case.</p>
