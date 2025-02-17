@@ -60,12 +60,13 @@ jobs:
         id: perform_release
         env:
           AUTO_RELEASE: ${{ vars.AUTO_RELEASE }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: >-
           mvn
           --batch-mode
           "-Dgoals=deploy"
           "-DreleaseProfiles=release,-examples"
-          "-Darguments=-Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          "-Darguments=-Dgpg.useagent=false -DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
           "-Dusername=${{ github.actor }}"
           "-Dpassword=${{ secrets.GITHUB_TOKEN }}"
           "-DrepoBaseUrl=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
