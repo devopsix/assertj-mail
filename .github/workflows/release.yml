@@ -23,6 +23,13 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Test GPG key expiry
+        run: |
+          EXPIRY=$(gpg --list-keys | egrep -o "expires:\s+[0-9-]+" | egrep -o "[0-9-]+" | sort | head -n 1)
+          echo "GPG key expires on ${EXPIRY}"
+          DELTA=$(( $(date --date "${EXPIRY}" '+%s') - $(date '+%s') ))
+          echo "GPG key expires in ${DELTA} seconds"
+          [[ ${DELTA} -ge 0 ]]
       - name: Set up JDK/Maven
         uses: actions/setup-java@v4
         with:

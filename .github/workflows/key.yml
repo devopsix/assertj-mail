@@ -1,0 +1,25 @@
+name: Test GPG Key Expiry
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '30 3 * * *'
+
+jobs:
+  key-expiry:
+    name: Test GPG Key Expiry
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Test GPG key expiry
+        run: |
+          EXPIRY=$(gpg --list-keys | egrep -o "expires:\s+[0-9-]+" | egrep -o "[0-9-]+" | sort | head -n 1)
+          echo "GPG key expires on ${EXPIRY}"
+          DELTA=$(( $(date --date "${EXPIRY}" '+%s') - $(date '+%s') ))
+          echo "GPG key expires in ${DELTA} seconds"
+          [[ ${DELTA} -ge 2592000 ]] && echo "GPG key valid for at least another 30 days" || echo "GPG key will expire within the next 30 days"
+          [[ ${DELTA} -ge 2592000 ]]
