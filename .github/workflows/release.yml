@@ -39,7 +39,7 @@ jobs:
           echo "GPG key expires in ${DELTA} seconds"
           [[ ${DELTA} -ge 0 ]]
       - name: Set up JDK/Maven
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
             distribution: 'zulu'
             java-version: 11
