@@ -11,8 +11,8 @@ jobs:
       - name: Set up JDK/Maven
         uses: actions/setup-java@v5
         with:
-          distribution: 'zulu'
-          java-version: 11
+          distribution: temurin
+          java-version: 25
       - name: Build and verify all modules
         run: >-
           mvn
