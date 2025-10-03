@@ -48,9 +48,9 @@ jobs:
         with:
           servers: >-
             [{
-              "id": "ossrh",
-              "username": "${{ secrets.OSS_USER }}",
-              "password": "${{ secrets.OSS_PASSWORD }}"
+              "id": "central.sonatype.org",
+              "username": "${{ secrets.MAVEN_CENTRAL_USER }}",
+              "password": "${{ secrets.MAVEN_CENTRAL_PASSWORD }}"
             }]
       - name: Configure git
         run: |
