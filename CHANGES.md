@@ -1,5 +1,9 @@
 # AssertJ Mail Changes
 
+## Version 1.0.9 (3 October 2025)
+
+* Dependencies updated
+
 ## Version 1.0.8 (30 March 2025)
 
 * Dependencies updated
