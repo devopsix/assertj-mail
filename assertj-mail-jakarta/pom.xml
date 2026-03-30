@@ -183,29 +183,29 @@
             <phase>generate-sources</phase>
             <configuration>
               <target>
-                <mkdir dir="${basedir}/target/generated-sources/java" />
-                <mkdir dir="${basedir}/target/generated-test-sources/java" />
-                <mkdir dir="${basedir}/target/generated-test-sources/resources" />
+                <mkdir dir="${basedir}/target/generated-sources/java"/>
+                <mkdir dir="${basedir}/target/generated-test-sources/java"/>
+                <mkdir dir="${basedir}/target/generated-test-sources/resources"/>
                 <copy todir="${basedir}/target/generated-sources/java">
-                  <fileset dir="${basedir}/../assertj-mail/src/main/java" />
+                  <fileset dir="${basedir}/../assertj-mail/src/main/java"/>
                 </copy>
                 <copy todir="${basedir}/target/generated-test-sources/java">
-                  <fileset dir="${basedir}/../assertj-mail/src/test/java" />
+                  <fileset dir="${basedir}/../assertj-mail/src/test/java"/>
                 </copy>
                 <copy todir="${basedir}/target/generated-test-sources/resources">
-                  <fileset dir="${basedir}/../assertj-mail/src/test/resources" />
+                  <fileset dir="${basedir}/../assertj-mail/src/test/resources"/>
                 </copy>
                 <replace token="javax.mail." value="jakarta.mail." dir="${basedir}/target/generated-sources/java">
-                  <include name="**/*.java" />
+                  <include name="**/*.java"/>
                 </replace>
                 <replace token="javax.activation." value="jakarta.activation." dir="${basedir}/target/generated-sources/java">
-                  <include name="**/*.java" />
+                  <include name="**/*.java"/>
                 </replace>
                 <replace token="javax.mail." value="jakarta.mail." dir="${basedir}/target/generated-test-sources/java">
-                  <include name="**/*.java" />
+                  <include name="**/*.java"/>
                 </replace>
                 <replace token="javax.activation." value="jakarta.activation." dir="${basedir}/target/generated-test-sources/java">
-                  <include name="**/*.java" />
+                  <include name="**/*.java"/>
                 </replace>
               </target>
             </configuration>

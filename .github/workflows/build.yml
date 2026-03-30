@@ -1,6 +1,21 @@
 name: Build
 
-on: [push]
+on:
+  push:
+    branches:
+      # Run for all branches (except for Release Please branches)
+      # This implies not running for tags
+      - '**'
+      - '!release-please--*'
+    paths:
+      - '.github/workflows/build.yaml'
+      - '**/src/**'
+      - '**/pom.xml'
+      - 'checkstyle-suppressions.xml'
+      - '!**/*.md'
+      - '!.github/CODEOWNERS'
+      - '!.github/dependabot.yaml'
+      - '!.github/**/*release-please*'
 
 jobs:
   build:

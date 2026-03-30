@@ -7,9 +7,13 @@ updates:
         update-types: [ 'version-update:semver-major' ]
     schedule:
       interval: 'daily'
+    commit-message:
+      prefix: "deps"
     open-pull-requests-limit: 100
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'daily'
+    commit-message:
+      prefix: "deps"
     open-pull-requests-limit: 100
