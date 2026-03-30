@@ -3,7 +3,7 @@
 
   <groupId>org.devopsix</groupId>
   <artifactId>assertj-mail-jakarta</artifactId>
-  <version>1.0.10</version>
+  <version>1.0.11-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>AssertJ Mail (Jakarta EE 9+)</name>
