@@ -3,7 +3,7 @@
 
   <groupId>org.devopsix</groupId>
   <artifactId>assertj-mail-parent</artifactId>
-  <version>1.0.10-SNAPSHOT</version>
+  <version>1.0.10</version>
   <packaging>pom</packaging>
 
   <properties>
