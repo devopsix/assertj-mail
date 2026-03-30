@@ -60,7 +60,7 @@ This project uses [Release Please] for release management.
 Release Please handles creation of release tags, GitHub releases and patching version numbers in `pom.xml` files.
 A new release is cut by merging the pull request maintained by Release Please.
 Building and deploying the actual Maven Artifacts for a release is the responsibility of the
-[release.yaml workflow](./.github/workflows/release.yaml).
+[release.yml workflow](./.github/workflows/release.yml).
 
 After a release has been made, Release Please will automatically create another pull request to update the version
 numbers in `pom.xml` files to the next snapshot version

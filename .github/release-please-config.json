@@ -8,6 +8,5 @@
   },
   "plugins": [
     "sentence-case"
-  ],
-  "last-release-sha": "f69d4e105f4a60750c72cd50efd2491d98504da6"
+  ]
 }
