@@ -34,6 +34,12 @@
         <artifactId>commons-io</artifactId>
         <version>2.22.0</version>
       </dependency>
+      <!-- greenmail-junit5 1.6.15 comes with a vulnerable version of jakarta.mail -->
+      <dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>jakarta.mail</artifactId>
+        <version>1.6.8</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
