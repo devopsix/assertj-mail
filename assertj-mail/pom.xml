@@ -406,6 +406,7 @@
               <publishingServerId>central.sonatype.org</publishingServerId>
               <autoPublish>${autoRelease}</autoPublish>
               <waitUntil>published</waitUntil>
+              <waitMaxTime>7200</waitMaxTime>
             </configuration>
           </plugin>
         </plugins>
