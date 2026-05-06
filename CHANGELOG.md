@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.11](https://github.com/devopsix/assertj-mail/compare/v1.0.10...v1.0.11) (2026-05-06)
+
+
+### Dependencies
+
+* Bump actions/create-github-app-token from 3.0.0 to 3.1.1 ([#175](https://github.com/devopsix/assertj-mail/issues/175)) ([56138dd](https://github.com/devopsix/assertj-mail/commit/56138ddaf1cb17ac607de4712229ba555b20c615))
+* Bump com.puppycrawl.tools:checkstyle from 13.4.0 to 13.4.1 ([#179](https://github.com/devopsix/assertj-mail/issues/179)) ([85ceb5e](https://github.com/devopsix/assertj-mail/commit/85ceb5eb424362ffc432330aa64c6bd8e52935bd))
+* Bump com.puppycrawl.tools:checkstyle from 13.4.1 to 13.4.2 ([#181](https://github.com/devopsix/assertj-mail/issues/181)) ([041a4f3](https://github.com/devopsix/assertj-mail/commit/041a4f3dc2fc19ce51c7974442a903b0792c8a1c))
+* Bump commons-io:commons-io from 2.21.0 to 2.22.0 ([#178](https://github.com/devopsix/assertj-mail/issues/178)) ([675a3d9](https://github.com/devopsix/assertj-mail/commit/675a3d9ebc8632a80574c16d1766681fc848dc27))
+* Bump dependabot/fetch-metadata from 2 to 3 ([#174](https://github.com/devopsix/assertj-mail/issues/174)) ([801be45](https://github.com/devopsix/assertj-mail/commit/801be457de2ad18014749dd66645be0fd4c0d7d1))
+* Bump googleapis/release-please-action from 4.4.0 to 5.0.0 ([#177](https://github.com/devopsix/assertj-mail/issues/177)) ([6cb7ab7](https://github.com/devopsix/assertj-mail/commit/6cb7ab73c77701c6b17ab57af739195b6eeda185))
+* Bump org.apache.james:apache-mime4j-core from 0.8.13 to 0.8.14 ([#180](https://github.com/devopsix/assertj-mail/issues/180)) ([20a50d8](https://github.com/devopsix/assertj-mail/commit/20a50d84ad5ccb8b0682726e55b2e16558a0cbc0))
+
 ## [1.0.10](https://github.com/devopsix/assertj-mail/compare/v1.0.9...v1.0.10) (2026-03-30)
 
 
