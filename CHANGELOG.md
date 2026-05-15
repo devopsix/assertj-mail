@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.12](https://github.com/devopsix/assertj-mail/compare/v1.0.11...v1.0.12) (2026-05-15)
+
+
+### Dependencies
+
+* Bump actions/create-github-app-token from 3.1.1 to 3.2.0 ([#186](https://github.com/devopsix/assertj-mail/issues/186)) ([79c9dfa](https://github.com/devopsix/assertj-mail/commit/79c9dfa279af1bfe323196cfefbf17995ac50b3c))
+* Bump com.sun.mail:jakarta.mail from 1.6.8 to 2.0.2 ([#185](https://github.com/devopsix/assertj-mail/issues/185)) ([786ac0b](https://github.com/devopsix/assertj-mail/commit/786ac0ba9392246b4df94a60400ba4215a3167d8))
+* Bump org.slf4j:slf4j-simple from 2.0.17 to 2.0.18 ([#187](https://github.com/devopsix/assertj-mail/issues/187)) ([24d7a14](https://github.com/devopsix/assertj-mail/commit/24d7a14cd409dcfa6fa4023ac2a275051b6b1a46))
+
 ## [1.0.11](https://github.com/devopsix/assertj-mail/compare/v1.0.10...v1.0.11) (2026-05-06)
 
 
