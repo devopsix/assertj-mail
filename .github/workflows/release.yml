@@ -24,7 +24,7 @@ jobs:
           echo "GPG key expires in ${DELTA} seconds"
           [[ ${DELTA} -ge 600 ]]
       - name: Check out from SCM
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Set up JDK/Maven
         uses: actions/setup-java@v5
         with:
