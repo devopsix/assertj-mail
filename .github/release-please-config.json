@@ -8,5 +8,8 @@
   },
   "plugins": [
     "sentence-case"
+  ],
+  "extra-files": [
+    "README.md"
   ]
 }

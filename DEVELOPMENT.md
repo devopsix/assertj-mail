@@ -65,7 +65,11 @@ Building and deploying the actual Maven Artifacts for a release is the responsib
 After a release has been made, Release Please will automatically create another pull request to update the version
 numbers in `pom.xml` files to the next snapshot version
 (see the [Maven strategy](https://github.com/googleapis/release-please/blob/main/docs/java.md)).
-This snapshot “release pull request” has to be merged immediately.
+Version numbers in README.md will also get updated with snapshot versions although that is unwanted. Release Please
+cannot be configured to skip updating README.md when creating a snapshot release. The unwanted changes need to be
+reverted manually.
+This snapshot “release pull request” has to be merged immediately after unwanted changes to version numbers in README.md
+have been reverted.
 
 
 [Conventional Commits]: https://www.conventionalcommits.org/
