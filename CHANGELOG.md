@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.13](https://github.com/devopsix/assertj-mail/compare/v1.0.12...v1.0.13) (2026-09-27)
+
+
+### Dependencies
+
+* Bump org.apache.maven.plugins:maven-deploy-plugin ([#221](https://github.com/devopsix/assertj-mail/issues/221)) ([8b4a593](https://github.com/devopsix/assertj-mail/commit/8b4a59399be9ec99209fd2e12aadd66ea038217a))
+* Bump org.codehaus.mojo:build-helper-maven-plugin ([#220](https://github.com/devopsix/assertj-mail/issues/220)) ([34f2c89](https://github.com/devopsix/assertj-mail/commit/34f2c89e7e022e85fefe73b30c3e4d3e55ad4c00))
+
 ## [1.0.12](https://github.com/devopsix/assertj-mail/compare/v1.0.11...v1.0.12) (2026-09-12)
 
 
