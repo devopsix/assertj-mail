@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.13](https://github.com/devopsix/assertj-mail/compare/v1.0.12...v1.0.13) (2026-10-25)
+
+
+### Dependencies
+
+* Bump actions/create-github-app-token from 3.2.0 to 3.3.0 ([#226](https://github.com/devopsix/assertj-mail/issues/226)) ([b12cb96](https://github.com/devopsix/assertj-mail/commit/b12cb96d4cc852ebb9cf99dc5ce5a60ec5f3f281))
+* Bump com.github.spotbugs:spotbugs-maven-plugin ([#227](https://github.com/devopsix/assertj-mail/issues/227)) ([040b763](https://github.com/devopsix/assertj-mail/commit/040b7632865afe3d74e4c5ea9811ccab70845e84))
+* Bump com.puppycrawl.tools:checkstyle from 14.1.0 to 14.3.0 ([#225](https://github.com/devopsix/assertj-mail/issues/225)) ([ecf462a](https://github.com/devopsix/assertj-mail/commit/ecf462a115854bd209646db858bc99e910354829))
+* Bump org.apache.maven.plugins:maven-deploy-plugin ([#221](https://github.com/devopsix/assertj-mail/issues/221)) ([8b4a593](https://github.com/devopsix/assertj-mail/commit/8b4a59399be9ec99209fd2e12aadd66ea038217a))
+* Bump org.codehaus.mojo:build-helper-maven-plugin ([#220](https://github.com/devopsix/assertj-mail/issues/220)) ([34f2c89](https://github.com/devopsix/assertj-mail/commit/34f2c89e7e022e85fefe73b30c3e4d3e55ad4c00))
+* Bump org.mockito:mockito-core from 5.23.0 to 5.24.0 ([#224](https://github.com/devopsix/assertj-mail/issues/224)) ([ecdddb8](https://github.com/devopsix/assertj-mail/commit/ecdddb8046e5b4ac4042566a3bf337906a3da120))
+* Bump org.slf4j:slf4j-simple from 2.0.19 to 2.0.20 ([#223](https://github.com/devopsix/assertj-mail/issues/223)) ([a71bb38](https://github.com/devopsix/assertj-mail/commit/a71bb382bdd9c589944895d59298c9bd0f36b7d8))
+* Bump org.sonatype.central:central-publishing-maven-plugin ([#228](https://github.com/devopsix/assertj-mail/issues/228)) ([287474e](https://github.com/devopsix/assertj-mail/commit/287474ed01970f8af34a21040c50542a5f0acae6))
+
 ## [1.0.12](https://github.com/devopsix/assertj-mail/compare/v1.0.11...v1.0.12) (2026-09-12)
 
 
